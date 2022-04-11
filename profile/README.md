@@ -9,6 +9,16 @@
 - [ ] Node server api
 - [ ] Js userscript
 
+### Current Endpoints (Beta):
+
+## [Pixel data](https://pixelcanvas-scraper.shadowlp174.repl.co/api/pixel/-497.2800)
+
+- URL: `https://pixelcanvas-scraper.shadowlp174.repl.co/api/pixel/%x.%y`
+- Return format: `JSON` or `false`
+- Usage: replace `%x.%y` with actual coords. Example: [api/pixel/-497.2800](https://pixelcanvas-scraper.shadowlp174.repl.co/api/pixel/-497.2800)
+
+This endpoint will retrieve the known data about the specified pixel (%x.%y). It will return `false` if the coordinates are not in the area of the qr code.
+
 <!--
 
 **Here are some ideas to get you started:**
