@@ -11,13 +11,55 @@
 
 ### Current Endpoints (Beta):
 
-## [Pixel data](https://pixelcanvas-scraper.shadowlp174.repl.co/api/pixel/-497.2800)
+#### [Pixel data](https://pixelcanvas-scraper.shadowlp174.repl.co/api/pixel/-497.2800)
 
 - URL: `https://pixelcanvas-scraper.shadowlp174.repl.co/api/pixel/%x.%y`
 - Return format: `JSON` or `false`
 - Usage: replace `%x.%y` with actual coords. Example: [api/pixel/-497.2800](https://pixelcanvas-scraper.shadowlp174.repl.co/api/pixel/-497.2800)
 
 This endpoint will retrieve the known data about the specified pixel (%x.%y). It will return `false` if the coordinates are not in the area of the qr code.
+
+#### Pixel Updates
+
+- URL: `wss://pixelcanvas-scraper.shadowlp174.repl.co/api/live`
+- Return format: `JSON` on update
+- Usage: connect through a websocket client to the given wss url. Then listen for the onmessage event.
+
+This enpoint will fire pixel updates to the connected clients, if the occured update was inside our area.
+
+Example code:
+
+```
+const socket = new WebSocket('wss://pixelcanvas-scraper.shadowlp174.repl.co/api/live');
+socket.onopen = () => {
+  console.log("Connected to server");
+};
+  
+socket.onmessage = (msg) => {
+  var data;
+  try {
+    data = JSON.parse(msg.data);
+  } catch (e) {
+    console.log("Invalid JSON: ", e, msg);
+    return;
+  }
+
+  switch (data.type.toLowerCase()) {
+    case "update":
+      console.log("Pixel update received: ", data.data);
+      var p = document.createElement("p");
+      p.innerHTML = "Pixel update: " + JSON.stringify(data.data);
+      document.getElementById("logs").appendChild(p);
+    break;
+    default:
+      console.log("Data received: ", data);
+      var p = document.createElement("p");
+      p.innerHTML = "Data: " + JSON.stringify(data.data);
+      document.getElementById("logs").appendChild(p);
+    break;
+  }
+};
+```
 
 <!--
 
