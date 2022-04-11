@@ -29,7 +29,7 @@ This enpoint will fire pixel updates to the connected clients, if the occured up
 
 Example code:
 
-```
+```JavaScript
 const socket = new WebSocket('wss://pixelcanvas-scraper.shadowlp174.repl.co/api/live');
 socket.onopen = () => {
   console.log("Connected to server");
