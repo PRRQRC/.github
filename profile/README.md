@@ -27,7 +27,7 @@ This endpoint will retrieve the known data about the specified pixel (%x.%y). It
 
 This enpoint will fire pixel updates to the connected clients, if the occured update was inside our area.
 
-Example code:
+Example code (JavaScript):
 
 ```JavaScript
 const socket = new WebSocket('wss://pixelcanvas-scraper.shadowlp174.repl.co/api/live');
