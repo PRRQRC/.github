@@ -4,8 +4,8 @@
 
 - [ ] Python server
 - [X] Pixelcanvas scraper
-- [ ] Pixel importance based on changes --> dynamic heat maps
-- [ ] connect scraper with existing commander
+- [X] Pixel importance based on changes --> dynamic heat maps
+- [X] connect scraper with existing commander
 - [ ] Node server api
 - [ ] Js userscript
 
