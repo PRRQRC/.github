@@ -25,7 +25,7 @@ This endpoint will retrieve the known data about the specified pixel (%x.%y). It
 - Return format: `JSON` on update
 - Usage: connect through a websocket client to the given wss url. Then listen for the onmessage event.
 
-This enpoint will fire pixel updates to the connected clients, if the occured update was inside our area.
+This endpoint will fire pixel updates to the connected clients, if the occured update was inside our area.
 
 Example code (JavaScript):
 
