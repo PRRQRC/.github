@@ -2,12 +2,12 @@
 
 ### ToDos
 
-- [ ] Python server
 - [X] Pixelcanvas scraper
 - [X] Pixel importance based on changes --> dynamic heat maps
 - [X] connect scraper with existing commander
-- [ ] Node server api
-- [ ] Js userscript
+- [X] Node server api
+- [X] Js userscript
+- [ ] Bug Hunting + fixing
 
 ### Current Endpoints (Beta):
 
