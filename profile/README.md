@@ -9,6 +9,11 @@
 - [X] Js userscript
 - [ ] Bug Hunting + fixing
 
+### Userscript (Pixelcanvas)
+
+- Userscript to automate the pixel placement in the browser (does not work as a headless bot!)
+- [Install Script through violent monkey](https://github.com/PRRQRC/pixelcanvas-userscript/raw/master/userscript.user.js)
+
 ### Current Endpoints (Beta):
 
 #### [Pixel data](https://pixelcanvas-scraper.shadowlp174.repl.co/api/pixel/-497.2800)
