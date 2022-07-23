@@ -1,5 +1,9 @@
 ## PlaceRickRollQRCode
 
+### Members
+
+We are currently 5 people who are working on this. If you want to help too just contact us in any way (for example through our Discord) :D
+
 ### ToDos
 
 - [X] Pixelcanvas scraper
